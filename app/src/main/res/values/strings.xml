@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">GuessThePlayer</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="click_here_to_start">Click Here To Start</string>
+    <string name="female">Female</string>
+    <string name="hello_world">Hello World</string>
+    <string name="i_have_football_knowledge">I Have Football Knowledge</string>
+    <string name="male">Male</string>
+    <string name="welcome_to_guess_the_player">Welcome To Guess The Player</string>
+    <string name="yourname">YourName:</string>
+    <string name="hekpp">name</string>
+    <string name="score">10/10</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="name">Name</string>
+    <string name="try_again">Try Again ?!!</string>
+    <string name="you_got">You Got:</string>
+    <string name="football_knowldege">football knowldege</string>
+    <string name="sex">sex</string>
 </resources>

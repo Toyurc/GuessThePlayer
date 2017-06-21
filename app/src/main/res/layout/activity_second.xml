@@ -12,7 +12,7 @@
         android:id="@+id/textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="hekpp"
+        android:text="@string/hekpp"
         android:gravity="center_horizontal"
         android:textSize="10sp"/>
 
@@ -21,7 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:scaleType="fitXY" />
+        android:scaleType="fitXY"
+        android:contentDescription="" />
 
     <Button
         android:id="@+id/button1"
@@ -57,5 +58,4 @@
         android:background="@drawable/button_selector"
         android:layout_margin="4dp"
         />
-
     </LinearLayout>

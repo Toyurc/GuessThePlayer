@@ -105,12 +105,13 @@ public class SecondActivity extends AppCompatActivity {
             noOfQuestions++;
 
         } else {
+
             LayoutInflater inflater = getLayoutInflater();
             View layout = inflater.inflate(R.layout.custom_toast2,
                     (ViewGroup) findViewById(R.id.custom_toast_container));
-
+            int rightPlayer = chosenPlayer - 1;
             TextView text = (TextView) layout.findViewById(R.id.text);
-            text.setText("Wrong! It was " + PlayersNames.get(--chosenPlayer));
+            text.setText("Wrong! It was " + PlayersNames.get(rightPlayer));
 
             Toast toast = new Toast(getApplicationContext());
             toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
@@ -134,6 +135,7 @@ public class SecondActivity extends AppCompatActivity {
             intent.putExtra("gender", Gender);
             intent.putExtra("message", Message);
             startActivity(intent);
+            finish();
         } else {
             createNewQuestion();
         }
@@ -185,14 +187,14 @@ public class SecondActivity extends AppCompatActivity {
         * send intent message from mainActivity to lastActivity
         * also to recieve intent extras that weredisplayed in this activity
         * */
-        Bundle secondintent = getIntent().getExtras();
-        if (secondintent == null) {
+        Bundle recieveBundle = getIntent().getExtras();
+        if (recieveBundle == null) {
             return;}
         else{
 
-            String name = secondintent.getString("name");
-            String gender = secondintent.getString("gender");
-            String message = secondintent.getString("message");
+            String name = recieveBundle.getString("name");
+            String gender = recieveBundle.getString("gender");
+            String message = recieveBundle.getString("message");
             textView.setText(name);
             Gender = gender;
             Message = message;

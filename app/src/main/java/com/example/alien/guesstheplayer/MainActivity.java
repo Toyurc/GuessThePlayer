@@ -26,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
         football = (CheckBox) findViewById(R.id.footballKnowledge);
     }
 
+    /*
+    * onClick metthod, to start the game, after accepting
+    * the name
+    * gender
+    * and know if user has football knowledge*/
     public void start(View view) {
         Name = theName.getText().toString();
         if (TextUtils.isEmpty(Name)) {
@@ -43,22 +48,23 @@ public class MainActivity extends AppCompatActivity {
             FootyKnowledge = football.isChecked();
             if (FootyKnowledge) {
                 Message = "with football knowledge";
-                intentstart();
             } else {
                 Message = "without football knowledge";
-                intentstart();
             }
+            startIntent();
         }
         // Log.i("here","is me the button");
     }
 
-
-    public void intentstart() {
+/*
+* method to start intent*/
+    public void startIntent() {
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra("name", Name);
         intent.putExtra("gender", Gender);
         intent.putExtra("message", Message);
         startActivity(intent);
+        finish();
     }
 
 

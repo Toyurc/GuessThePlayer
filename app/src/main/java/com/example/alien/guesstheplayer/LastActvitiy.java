@@ -23,15 +23,15 @@ public class LastActvitiy extends AppCompatActivity {
         footyknowledgeTextView = (TextView) findViewById(R.id.hasfootballknowledge);
         scoretextView = (TextView)findViewById(R.id.score);
 
-        Bundle lastintent = getIntent().getExtras();
-        if (lastintent == null) {
+        Bundle recievedBundle = getIntent().getExtras();
+        if (recievedBundle == null) {
             return;}
         else{
 
-            String name = lastintent.getString("name");
-            String gender = lastintent.getString("gender");
-            String message = lastintent.getString("message");
-            String score = lastintent.getString("score");
+            String name = recievedBundle.getString("name");
+            String gender = recievedBundle.getString("gender");
+            String message = recievedBundle.getString("message");
+            String score = recievedBundle.getString("score");
             nametextView.setText(name);
             genderTextView.setText(gender);
             footyknowledgeTextView.setText(message);
@@ -42,6 +42,9 @@ public class LastActvitiy extends AppCompatActivity {
     public void restart (View view){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
+
+
 
 }
